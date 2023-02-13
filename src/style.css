@@ -19,7 +19,76 @@ body {
     background: url(../public/images/content_bg4.png) repeat;
 }
 
-header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, div {
     display: block;
     box-sizing: border-box;
 }
+
+.home-enter {
+
+}
+
+.home-exit {
+
+}
+
+.slide-enter,
+.slide-exit {
+  transition: transform 1000ms ease-out;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../public/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf);
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../public/fonts/Noto_Sans_KR/NotoSansKR-Light.otf);
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../public/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../public/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf);
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../public/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf);
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../public/fonts/Noto_Sans_KR/NotoSansKR-Black.otf);
+    font-weight: 900;
+  }
