@@ -1,7 +1,7 @@
 ## 📓 Do it! 웹사이트 따라 만들기
 
 <p align="center">
-    <img src="imgs/monitor.png" width="300px">
+    <img src="imgs/monitor.png" width="280px">
 </p>
 <p align="center">
  <a href="https://ameliacode.github.io/doit_web_publish">View Demo</a>
