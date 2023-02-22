@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fa593537.css",
+    "main.js": "/static/js/main.fd4788c8.js",
+    "static/media/NotoSansKR-Black.otf": "/static/media/NotoSansKR-Black.dba005b6b1bed712b472.otf",
+    "static/media/NotoSansKR-Bold.otf": "/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
+    "static/media/NotoSansKR-Medium.otf": "/static/media/NotoSansKR-Medium.56207b5e52841342a21b.otf",
+    "static/media/NotoSansKR-Regular.otf": "/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
+    "static/media/NotoSansKR-Light.otf": "/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
+    "static/media/NotoSansKR-Thin.otf": "/static/media/NotoSansKR-Thin.a3e74b5ef0ed5ab193f5.otf",
+    "static/media/contact_bg.png": "/static/media/contact_bg.06868238a41de7ca8fc0.png",
+    "static/media/content_bg1.png": "/static/media/content_bg1.ba88389e9de07e8db73f.png",
+    "static/media/content_bg2.png": "/static/media/content_bg2.0eeb2501fe40a94d9829.png",
+    "static/media/content_bg3.png": "/static/media/content_bg3.1554435440c23fa2ebe4.png",
+    "static/media/content_bg4.png": "/static/media/content_bg4.62444279fba731e1ec37.png",
+    "static/media/menu_bg1.png": "/static/media/menu_bg1.951b305d896ffb3acb02.png",
+    "static/media/contact_pop.jpg": "/static/media/contact_pop.6b7fc8ec21d7229febe8.jpg",
+    "static/media/bookbg.png": "/static/media/bookbg.cbb5b8cea365a9fcdb1e.png",
+    "static/media/mackbook.png": "/static/media/mackbook.6beeea47094d32dfc9e1.png",
+    "index.html": "/index.html",
+    "main.fa593537.css.map": "/static/css/main.fa593537.css.map",
+    "main.fd4788c8.js.map": "/static/js/main.fd4788c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa593537.css",
+    "static/js/main.fd4788c8.js"
+  ]
+}

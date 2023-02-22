@@ -1,0 +1,9 @@
+{
+  "short_name": "이지스퍼블리싱",
+  "name": "Do it! 웹페이지 따라 만들기 clone project",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
