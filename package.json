@@ -9,7 +9,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.13",
-    "framer-motion": "^9.0.2",
+    "framer-motion": "^9.0.7",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-css": "tailwindcss build src/style.css -o dist/style.css"
+    "build-css": "tailwindcss build src/style.css -o dist/style.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

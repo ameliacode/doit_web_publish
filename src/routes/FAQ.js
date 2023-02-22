@@ -1,14 +1,16 @@
 import PageTitle from "components/PageTitle";
+import { useEffect, useState } from "react";
 import { FAQInfo } from "./FAQInfo";
 
-const FAQItem = ({item, index}) => {
+const FAQItem = ({item, index, show}) => {
     const {question, link, linkalt, answer, imgsrc, top} = item
     return(
         <>
-        <h4 className="text-[#3c4147] font-medium pr-[20px] pb-[20px] mt-[20px] mr-[20px] ml-[30px] cursor-pointer">
+        <h4 className={`text-[#3c4147] font-medium pr-[20px] pb-[20px] mt-[20px] mr-[20px] ml-[30px] cursor-pointer
+        ${show===index ? "bg-select_down" : "bg-select_up"} bg-no-repeat bg-[right_11px]`}>
             <span className="inline-block mr-[10px] font-black">Q{index}</span>{question}
         </h4>
-        <p className="h-auto bg-[#eee] bg-no-repeat">
+        <p className={`${show===index ? "h-auto visible opacity-100" : "h-0 hidden opacity-0"} bg-[#eee] bg-no-repeat`}>
             <div>
                 <img src={imgsrc} className={`w-[100px] float-left relative left-[40px] ${top}`}/>
                 <div className="pt-[30px] pr-[100px] pb-[70px] pl-[200px] text-[#737373]">
@@ -26,6 +28,16 @@ const FAQItem = ({item, index}) => {
 }
 
 const FAQ = () => {
+    const [show, setShow] = useState(1);
+
+    const handleclick = (number) => {
+        setShow(number);
+    }
+
+    useEffect(() => {
+        console.log(show)
+    }, [show])
+
     return (
         <section className="font-noto bg-menu3-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"FAQ"}/>
@@ -39,8 +51,9 @@ const FAQ = () => {
                   <div className="mt-[170px]">
                     <ol>
                         { FAQInfo.map((item, index) => (
-                        <li className="w-full bg-white border-t-[4px] border-[#ea657b]">
-                            <FAQItem item={item} index={index+1} />
+                        <li onClick={()=>handleclick(index+1)}
+                           className="w-full bg-white border-t-[4px] border-[#ea657b]">
+                            <FAQItem item={item} index={index+1} show={show}/>
                        </li>
                         ))}
                  

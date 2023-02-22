@@ -1,18 +1,18 @@
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { motion } from "framer-motion"
 
-const RouteTransition = ({location, children}) => {
-    const pathname = location.pathname;
-
+export const RouteTransition = (props) => {
     return(
-        <TransitionGroup>
-            <CSSTransition 
-            key={pathname}
-            timeout={300}
-            classNames="slide">
-                {children}
-            </CSSTransition>
-        </TransitionGroup>
-    );
+        <motion.div
+        {...props}
+        initial={{ opacity: 0, x: '50vw' }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: '-50vw' }}
+        style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}
+        transition={{ type: 'tween', duration: .3 }}
+    >
+        {props.children}
+    </motion.div>
+    )
 } 
 
-export default RouteTransition;

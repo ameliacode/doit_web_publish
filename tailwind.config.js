@@ -7,7 +7,9 @@ module.exports = {
         noto: ['Noto Sans KR'],
       },
       animation: {
-        item: 'item 0.8s '
+        item: 'item 0.8s ',
+        notebook: "notebook 0.8s ease-in-out",
+        fade: "fade 0.8s ease-in-out"
       },
       keyframes: {
         item: {
@@ -18,6 +20,24 @@ module.exports = {
           '100%' : {
             opacity: 100,
             top: 0
+          }
+        },
+        notebook: {
+          '0%' : {
+            opacity: 0,
+            transform: 'scaleY(0.1)'
+          },
+          '100%' : {
+            opacity: 100,
+            transform: 'scaleY(1)'
+          }
+        },
+        fade: {
+          '0%' : {
+            opacity: 0,
+          },
+          '100%' : {
+            opacity: 100,
           }
         }
       },
@@ -33,6 +53,10 @@ module.exports = {
         "icon4-image" : "url('../public/images/main_ico4.png')",
         "macbook" : "url('../public/images/mackbook.png')",
         "bookbg" : "url('../public/images/bookbg.png')",
+        "contactbg": "url('../public/images/contact_bg.png')",
+        "contactpop": "url('../public/images/contact_pop.jpg')",
+        "select_up": "url('../public/images/select_bullet_up.png')",
+        "select_down": "url('../public/images/select_bullet_down.png')",
       },
       colors: {
         "red": "#ed3140",
