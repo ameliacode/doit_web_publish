@@ -1,6 +1,6 @@
 ## 📓 Do it! 웹사이트 따라 만들기
 
-<img src="imgs/indigo-template.png">
+<img src="imgs/monitor.png">
 
 <p align="center">
  <a href="https://ameliacode.github.io/doit_web_publish">View Demo</a>
