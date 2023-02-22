@@ -1,5 +1,6 @@
 {
   "name": "doit_web_publish",
+  "homepage": "https://ameliacode.github.io/doit_web_publish",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
