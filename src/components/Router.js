@@ -1,10 +1,6 @@
 import { createRef } from "react";
-import {BrowserRouter as Router, 
-    Route, 
-    Routes, 
-    useNavigate, 
+import {
     useLocation,
-    createBrowserRouter,
     useOutlet
 } from "react-router-dom";
 import Home from "routes/Home";
@@ -12,7 +8,6 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import { useState } from "react";
 import Company from "routes/Company";
-import RouteTransition from "./RouteTransition";
 import { TransitionGroup, CSSTransition, SwitchTransition } from "react-transition-group";
 import Books from "routes/Books";
 import FAQ from "routes/FAQ";
