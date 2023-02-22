@@ -2,6 +2,7 @@ import PageTitle from "components/PageTitle";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookInfo } from "./BookInfo";
+import { motion } from "framer-motion";
 
 const Books = () => {
     const [buttonMode, setButtonMode] = useState(null);
@@ -32,12 +33,22 @@ const Books = () => {
     console.log(BookInfo[bookIndex])
 
     return(
-        <section className="font-noto bg-menu2-image bg-repeat h-full text-gray-text overflow-y-auto">
+        <motion.div 
+            key="books"
+            initial={{ opacity: 1, x: "-100%", y: "-2%"}}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: .8 }}
+            className="font-noto bg-menu2-image bg-repeat h-full text-gray-text overflow-y-auto">
             <PageTitle title={'도서소개'}/>
             <div className="max-w-full bg-bookbg bg-no-repeat bg-[left_top_22rem]">
                 <section className="p-[50px] pt-[30px]">
-                    <div>
-                        <article className="animate-notebook w-[954px] h-[650px] mx-auto mt-[100px] bg-macbook bg-no-repeat bg-contain relative">
+                    <motion.div
+                    initial={{ opacity: 0, scaleY: 0}}
+                    animate={{ opacity: 1, scaleY: 1 }}
+                    transition={{duration: .8, delay: .8}}
+                    >
+                        <article className="w-[954px] h-[650px] mx-auto mt-[100px] bg-macbook bg-no-repeat bg-contain relative">
                             <div className="w-[719px] h-[453px] absolute left-[117px] top-[38px] py-[30px]">
                                 <div className="flex flex-rows">
                                     <img className="w-[270px] h-full" width={270}
@@ -72,7 +83,7 @@ const Books = () => {
                                 </div>
                             </div>
                         </article>
-                    </div>
+                    </motion.div>
                     <div className="relative w-[954px] h-[150px] mt-[40px] mx-auto grid grid-cols-[max-content_1fr_max-content]">
                         <button 
                         onClick = {() => setButtonMode("left")}
@@ -101,7 +112,7 @@ const Books = () => {
                     </div>
                 </section>
             </div>
-        </section>
+        </motion.div>
     );
 }
 

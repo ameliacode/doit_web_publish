@@ -1,6 +1,9 @@
+
+import React from "react";
+import { motion } from "framer-motion";
+
 const Home = () => {
 
-    
     return(
         <section className="font-noto w-full h-full relative max-w-[1200px] mx-auto">
             <section className="animate-item animation-delay-none fill-mode-forwards

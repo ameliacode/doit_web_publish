@@ -1,6 +1,7 @@
 import PageTitle from "components/PageTitle";
 import { useEffect, useState } from "react";
 import { FAQInfo } from "./FAQInfo";
+import { motion } from "framer-motion";
 
 const FAQItem = ({item, index, show}) => {
     const {question, link, linkalt, answer, imgsrc, top} = item
@@ -39,7 +40,13 @@ const FAQ = () => {
     }, [show])
 
     return (
-        <section className="font-noto bg-menu3-image bg-repeat h-full overflow-y-auto text-gray-text">
+        <motion.div 
+            key="faq"
+            initial={{ x: "-100%"}}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: .8 }}
+            className="font-noto bg-menu3-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"FAQ"}/>
             <div className="max-w-[1100px] m-auto"> 
                 <section className="p-[50px] pt-[30px]">
@@ -61,7 +68,7 @@ const FAQ = () => {
                     </div>
                 </section>
             </div>
-        </section>
+        </motion.div>
     );
 }
 
