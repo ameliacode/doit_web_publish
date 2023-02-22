@@ -9,7 +9,7 @@ import { RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppRouter />,
+    element: <div className='bg-red'/>,
     children: routes.map((route) => ({
       index: route.path === '/',
       path: route.path === '/' ? undefined : route.path,
