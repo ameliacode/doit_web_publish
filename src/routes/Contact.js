@@ -17,8 +17,8 @@ const Contact = ({location}) => {
     return (
         <motion.div 
             key={location.pathname}
-            initial={{ opacity: 1, x: '-100%' }}
-            animate={{ opacity: 1, x: 0}}
+            initial={{ opacity: 1, x: '-100%', y: "-2%"}}
+            animate={{ opacity: 1, x: 0, y: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{type: "tween", duration: .8}}
             className="font-noto bg-menu4-image bg-repeat h-full overflow-y-auto text-gray-text">
