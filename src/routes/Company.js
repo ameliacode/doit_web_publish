@@ -1,9 +1,15 @@
 import PageTitle from "components/PageTitle";
+import { RouteTransition } from "components/RouteTransition";
 import { motion } from "framer-motion";
 
 const Company = ({location}) => {
     return(
-        <section
+        <motion.div 
+            key={location.pathname}
+            initial={{ opacity: 1, x: '-100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{type: "tween", duration: .8}}
             className="font-noto bg-menu1-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"회사소개"}/>
             <section className="p-[50px] pt-[30px]">
@@ -40,7 +46,7 @@ const Company = ({location}) => {
                 <img className="h-[280px] w-[170px]" src="images/content_img3.png" width={170} height={270}/>
             </div>
             </section>
-        </section>
+        </motion.div>
     );
 }
 

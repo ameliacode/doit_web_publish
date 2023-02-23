@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookInfo } from "./BookInfo";
 import { motion } from "framer-motion";
+import { RouteTransition } from "components/RouteTransition";
 
 const Books = ({location}) => {
     const [buttonMode, setButtonMode] = useState(null);
@@ -33,12 +34,18 @@ const Books = ({location}) => {
     console.log(BookInfo[bookIndex])
 
     return(
-        <section className="font-noto bg-menu2-image bg-repeat h-full text-gray-text overflow-y-auto">
+        <motion.div
+            key={location.pathname}
+            initial={{ opacity: 1, x: '-100%'}}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{type: "tween", duration: .8}}
+            className="font-noto bg-menu2-image bg-repeat h-full text-gray-text overflow-y-auto">
             <PageTitle title={'도서소개'}/>
             <div className="max-w-full bg-bookbg bg-no-repeat bg-[left_top_22rem]">
                 <section className="p-[50px] pt-[30px]">
                     <div>
-                        <article className="w-[954px] h-[650px] mx-auto mt-[100px] bg-macbook bg-no-repeat bg-contain relative">
+                        <article className="animate-notebook w-[954px] h-[650px] mx-auto mt-[100px] bg-macbook bg-no-repeat bg-contain relative">
                             <div className="w-[719px] h-[453px] absolute left-[117px] top-[38px] py-[30px]">
                                 <div className="flex flex-rows">
                                     <img className="w-[270px] h-full" width={270}
@@ -102,7 +109,7 @@ const Books = ({location}) => {
                     </div>
                 </section>
             </div>
-        </section>
+        </motion.div>
     );
 }
 

@@ -2,6 +2,7 @@ import PageTitle from "components/PageTitle";
 import { useEffect, useState } from "react";
 import { FAQInfo } from "./FAQInfo";
 import { motion } from "framer-motion";
+import { RouteTransition } from "components/RouteTransition";
 
 const FAQItem = ({item, index, show}) => {
     const {question, link, linkalt, answer, imgsrc, top} = item
@@ -40,7 +41,12 @@ const FAQ = ({location}) => {
     }, [show])
 
     return (
-        <section
+        <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0, x: '-100%'}}
+            animate={{ opacity: 1, x: 0}}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{type: "tween", duration: .8}}
             className="font-noto bg-menu3-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"FAQ"}/>
             <div className="max-w-[1100px] m-auto"> 
@@ -63,7 +69,7 @@ const FAQ = ({location}) => {
                     </div>
                 </section>
             </div>
-        </section>
+        </motion.div>
     );
 }
 
