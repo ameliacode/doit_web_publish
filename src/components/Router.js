@@ -17,15 +17,13 @@ const AppRouter = () => {
     
     return(
         <>
-        <AnimatePresence>
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/company" element={<Company/>}/>
-                <Route path="/books" element={<Books/>}/>
-                <Route path="/faq" element={<FAQ/>}/>
-                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/" element={<Home location={location}/>}/>
+                <Route path="/company" element={<Company location={location}/>}/>
+                <Route path="/books" element={<Books location={location}/>}/>
+                <Route path="/faq" element={<FAQ location={location}/>}/>
+                <Route path="/contact" element={<Contact location={location}/>}/>
             </Routes>
-        </AnimatePresence>
         </>
     );
 }

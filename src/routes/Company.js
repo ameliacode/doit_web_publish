@@ -1,14 +1,9 @@
 import PageTitle from "components/PageTitle";
 import { motion } from "framer-motion";
 
-const Company = () => {
+const Company = ({location}) => {
     return(
-        <motion.div 
-            key="company"
-            initial={{ x: "-100%"}}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: .8 }}
+        <section
             className="font-noto bg-menu1-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"회사소개"}/>
             <section className="p-[50px] pt-[30px]">
@@ -45,7 +40,7 @@ const Company = () => {
                 <img className="h-[280px] w-[170px]" src="images/content_img3.png" width={170} height={270}/>
             </div>
             </section>
-        </motion.div>
+        </section>
     );
 }
 

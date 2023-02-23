@@ -2,7 +2,7 @@ import PageTitle from "components/PageTitle";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const Contact = ({location}) => {
     const [show, setShow] = useState(false);
 
     const handleSend = () => {
@@ -14,13 +14,6 @@ const Contact = () => {
     }
 
     return (
-        <motion.div
-            key="contact"
-            initial={{ x: "-100%"}}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: .8 }}
-        >
         <section className="font-noto bg-menu4-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"Contact Us"}/>
             <section className="w-[800px] mt-[100px] mx-auto p-[30px] bg-white/70 rounded-[5px] ">
@@ -74,7 +67,6 @@ const Contact = () => {
                 </form>
             </section>
         </section>
-        </motion.div>
     );
 }
 

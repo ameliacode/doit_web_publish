@@ -42,6 +42,7 @@ module.exports = {
         }
       },
       backgroundImage: {
+        "mainico1" : "url('../public/images/main_ico1.png')",
         "header-image" : "url('../public/images/menu_bg1.png')",
         "menu1-image" : "url('../public/images/content_bg1.png')",
         "menu2-image" : "url('../public/images/content_bg2.png')",

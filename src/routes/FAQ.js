@@ -28,7 +28,7 @@ const FAQItem = ({item, index, show}) => {
     );
 }
 
-const FAQ = () => {
+const FAQ = ({location}) => {
     const [show, setShow] = useState(1);
 
     const handleclick = (number) => {
@@ -40,12 +40,7 @@ const FAQ = () => {
     }, [show])
 
     return (
-        <motion.div 
-            key="faq"
-            initial={{ x: "-100%"}}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: .8 }}
+        <section
             className="font-noto bg-menu3-image bg-repeat h-full overflow-y-auto text-gray-text">
             <PageTitle title={"FAQ"}/>
             <div className="max-w-[1100px] m-auto"> 
@@ -68,7 +63,7 @@ const FAQ = () => {
                     </div>
                 </section>
             </div>
-        </motion.div>
+        </section>
     );
 }
 
