@@ -2,9 +2,7 @@
 
 <p align="center">
     <img src="imgs/monitor.png">
-</p>
-<p align="center">
- <a href="https://ameliacode.github.io/doit_web_publish">View Demo</a>
+    <a href="https://ameliacode.github.io/doit_web_publish">View Demo</a>
 </p>
 
 ---
