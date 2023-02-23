@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/doit_web_publish/static/css/main.03af05c1.css",
-    "main.js": "/doit_web_publish/static/js/main.53e76113.js",
+    "main.js": "/doit_web_publish/static/js/main.88379319.js",
     "static/media/NotoSansKR-Black.otf": "/doit_web_publish/static/media/NotoSansKR-Black.dba005b6b1bed712b472.otf",
     "static/media/NotoSansKR-Bold.otf": "/doit_web_publish/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/NotoSansKR-Medium.otf": "/doit_web_publish/static/media/NotoSansKR-Medium.56207b5e52841342a21b.otf",
@@ -19,10 +19,10 @@
     "static/media/mackbook.png": "/doit_web_publish/static/media/mackbook.6beeea47094d32dfc9e1.png",
     "index.html": "/doit_web_publish/index.html",
     "main.03af05c1.css.map": "/doit_web_publish/static/css/main.03af05c1.css.map",
-    "main.53e76113.js.map": "/doit_web_publish/static/js/main.53e76113.js.map"
+    "main.88379319.js.map": "/doit_web_publish/static/js/main.88379319.js.map"
   },
   "entrypoints": [
     "static/css/main.03af05c1.css",
-    "static/js/main.53e76113.js"
+    "static/js/main.88379319.js"
   ]
 }
